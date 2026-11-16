@@ -95,3 +95,44 @@ h1 { font-size: clamp(48px,6vw,72px); margin: 24px 0 18px; }
   .hero { grid-template-columns: 1fr; padding-block: 60px 45px; gap: 25px; }.hero-copy { text-align: center; }.hero-description { margin-inline: auto; }.hero-actions, .hero-proof { justify-content: center; }.hero-visual { min-height: 300px; transform: none; }.code-window { width: 95%; }.orbit-one { width: 320px; }.orbit-two { width: 350px; }.chip-top { right: -2px; }.chip-bottom { left: -2px; }
   .stats-strip { gap: 17px; padding: 18px; }.stats-strip strong { font-size: 20px; }.section { padding-block: 75px; }.section-heading { display: block; }.section-heading > p { margin-top: 13px; }.feature-grid { grid-template-columns: 1fr; }.panel { padding: 21px; }.challenge-inner { grid-template-columns: 1fr; gap: 30px; }.challenge-section { padding: 55px 0; }.footer-inner { flex-wrap: wrap; justify-content: center; text-align: center; }.footer-inner p { order: 3; width: 100%; }
 }
+
+
+/* LIGHT MODE */
+
+body.light-mode {
+    background: #f4f5fb;
+    color: #20243a;
+}
+
+body.light-mode .site-header {
+    background: rgba(255,255,255,.9);
+}
+
+body.light-mode .panel,
+body.light-mode .code-window,
+body.light-mode .challenge-card {
+    background: #ffffff;
+    color: #20243a;
+}
+
+body.light-mode .stats-strip {
+    background: #ffffff;
+}
+
+body.light-mode .panel h3,
+body.light-mode .faq-question {
+    color: #20243a;
+}
+
+body.light-mode .hero-proof strong {
+    color: #20243a;
+}
+
+body.light-mode .nav-links a {
+    color: #555b70;
+}
+
+body.light-mode .nav-links a:hover {
+    color: #805ce5;
+}
+
