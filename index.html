@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A modern interactive dashboard built with HTML and CSS, ready for JavaScript practice.">
+  <title>JS Playground | Interactive Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <header class="site-header">
+    <nav class="navbar container">
+      <a class="brand" href="#" aria-label="JS Playground home">
+        <span class="brand-mark">&lt;/&gt;</span>
+        <span>js<span class="brand-accent">playground</span></span>
+      </a>
+      <button class="mobile-menu-btn" type="button" aria-label="Open navigation menu">☰</button>
+      <div class="nav-links">
+        <a class="active" href="#home">Home</a>
+        <a href="#playground">Playground</a>
+        <a href="#tasks">Tasks</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <!-- JS PRACTICE: Add dark/light theme toggle functionality here. -->
+      <button class="theme-btn" id="themeToggle" type="button" aria-label="Toggle theme">☼ <span>Theme</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse-dot"></span> YOUR INTERACTIVE CODING SPACE</div>
+        <h1>Make your ideas<br> <span class="gradient-text">come alive.</span></h1>
+        <p class="hero-description">A playground to practice JavaScript, experiment with events, and turn simple elements into powerful interactions.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#playground">Start practicing <span>↗</span></a>
+          <a class="btn btn-ghost" href="#tasks">Explore features</a>
+        </div>
+        <div class="hero-proof">
+          <div class="avatar-stack"><span>A</span><span>J</span><span>P</span></div>
+          <p><strong>One page.</strong> Endless possibilities.</p>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="code-window">
+          <div class="window-top"><div class="window-dots"><i></i><i></i><i></i></div><span>script.js</span><span class="window-status">● ready to code</span></div>
+          <div class="code-content">
+            <div><span class="line-no">01</span><span class="code-purple">const</span> <span class="code-blue">yourIdeas</span> = <span class="code-yellow">"anything"</span>;</div>
+            <div><span class="line-no">02</span></div>
+            <div><span class="line-no">03</span><span class="code-purple">function</span> <span class="code-green">makeItHappen</span>() {</div>
+            <div><span class="line-no">04</span>&nbsp;&nbsp;<span class="code-purple">return</span> <span class="code-yellow">"Keep building!"</span>;</div>
+            <div><span class="line-no">05</span>}</div>
+            <div><span class="line-no">06</span></div>
+            <div><span class="line-no">07</span><span class="code-muted">// Your JavaScript journey starts here ✨</span></div>
+            <div><span class="line-no">08</span><span class="cursor"></span></div>
+          </div>
+          <div class="code-window-footer"><span>HTML <b>●</b></span><span>CSS <b>●</b></span><span>JS <em>YOUR TURN</em></span></div>
+        </div>
+        <div class="floating-chip chip-top">✦ Build something cool</div>
+        <div class="floating-chip chip-bottom"><span>⌘</span> Learn by doing</div>
+      </div>
+    </section>
+
+    <section class="stats-strip container" aria-label="Practice areas">
+      <div><strong>06</strong><span>Practice zones</span></div>
+      <div><strong>15+</strong><span>JS challenges</span></div>
+      <div><strong>∞</strong><span>Ways to experiment</span></div>
+      <div class="stats-note"><span class="live-dot"></span> Your coding lab is ready</div>
+    </section>
+
+    <section class="section container" id="playground">
+      <div class="section-heading">
+        <div><span class="section-kicker">THE PLAYGROUND</span><h2>Pick a feature. <span class="gradient-text">Make it work.</span></h2></div>
+        <p>Every component is a chance to practice a new JavaScript concept.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="panel counter-panel">
+          <div class="panel-top"><span class="icon-box purple">⌁</span><span class="tag">DOM MANIPULATION</span></div>
+          <h3>Counter app</h3><p class="panel-desc">Practice click events and updating text content.</p>
+          <div class="counter-display" id="counterValue">00</div>
+          <div class="counter-controls">
+            <button class="round-btn" id="decreaseBtn" type="button" aria-label="Decrease counter">−</button>
+            <button class="round-btn reset-btn" id="resetBtn" type="button" aria-label="Reset counter">↺</button>
+            <button class="round-btn plus-btn" id="increaseBtn" type="button" aria-label="Increase counter">+</button>
+          </div>
+          <span class="hint">JS task: add, subtract & reset the number</span>
+        </article>
+
+        <article class="panel todo-panel" id="tasks">
+          <div class="panel-top"><span class="icon-box mint">✓</span><span class="tag">ARRAYS + EVENTS</span></div>
+          <h3>My task list</h3><p class="panel-desc">Add tasks, mark them done, and remove them.</p>
+          <form class="task-form" id="taskForm">
+            <label class="sr-only" for="taskInput">Enter a task</label>
+            <input id="taskInput" type="text" placeholder="What needs to be done?">
+            <button class="add-btn" type="submit" aria-label="Add task">+</button>
+          </form>
+          <ul class="task-list" id="taskList">
+            <li><span class="task-check"></span><span>Explore the DOM</span><small>01</small></li>
+            <li><span class="task-check"></span><span>Practice event listeners</span><small>02</small></li>
+            <li class="task-done"><span class="task-check">✓</span><span>Set up my playground</span><small>03</small></li>
+          </ul>
+          <span class="hint">JS task: create, complete & delete list items</span>
+        </article>
+
+        <article class="panel search-panel">
+          <div class="panel-top"><span class="icon-box orange">⌕</span><span class="tag">FILTER + STRINGS</span></div>
+          <h3>Quick search</h3><p class="panel-desc">Search through these sample learning topics.</p>
+          <label class="sr-only" for="searchInput">Search topics</label>
+          <div class="search-field"><span>⌕</span><input id="searchInput" type="search" placeholder="Search a topic..."><kbd>⌘ K</kbd></div>
+          <div class="topic-list" id="topicList">
+            <span class="topic-pill">JavaScript</span><span class="topic-pill">DOM</span><span class="topic-pill">Events</span><span class="topic-pill">Arrays</span><span class="topic-pill">Functions</span><span class="topic-pill">Objects</span>
+          </div>
+          <span class="hint">JS task: filter topics as the user types</span>
+        </article>
+
+        <article class="panel modal-panel">
+          <div class="panel-top"><span class="icon-box pink">▣</span><span class="tag">CONDITIONALS + MODAL</span></div>
+          <h3>Popup interaction</h3><p class="panel-desc">Open a modal, show a message, and close it.</p>
+          <div class="mini-preview"><div class="mini-preview-icon">✦</div><div><strong>Ready for a surprise?</strong><span>There's a message waiting for you.</span></div></div>
+          <button class="btn btn-primary btn-full" id="openModalBtn" type="button">Open the popup <span>↗</span></button>
+          <span class="hint">JS task: show/hide the modal with classList</span>
+        </article>
+
+        <article class="panel form-panel">
+          <div class="panel-top"><span class="icon-box blue">✉</span><span class="tag">FORMS + VALIDATION</span></div>
+          <h3>Mini contact form</h3><p class="panel-desc">Practice reading values and validating inputs.</p>
+          <form id="contactForm" class="contact-form">
+            <label for="nameInput">Your name</label><input id="nameInput" type="text" placeholder="e.g. Alex Morgan">
+            <label for="emailInput">Email address</label><input id="emailInput" type="email" placeholder="alex@example.com">
+            <button class="btn btn-dark btn-full" type="submit">Send message <span>→</span></button>
+          </form>
+          <span class="hint">JS task: validate fields and show feedback</span>
+        </article>
+
+        <article class="panel faq-panel" id="faq">
+          <div class="panel-top"><span class="icon-box yellow">?</span><span class="tag">CLICK EVENTS + UI</span></div>
+          <h3>Quick questions</h3><p class="panel-desc">Build an accordion using click events.</p>
+          <div class="faq-item"><button class="faq-question" type="button">What is JavaScript? <span>＋</span></button><div class="faq-answer">JavaScript makes web pages interactive and dynamic.</div></div>
+          <div class="faq-item"><button class="faq-question" type="button">What is the DOM? <span>＋</span></button><div class="faq-answer">The DOM is a programming interface for HTML documents.</div></div>
+          <div class="faq-item"><button class="faq-question" type="button">What is an event listener? <span>＋</span></button><div class="faq-answer">It waits for an event, such as a click or key press, and runs a function.</div></div>
+          <span class="hint">JS task: toggle the answer panel on click</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="challenge-section">
+      <div class="container challenge-inner">
+        <div><span class="section-kicker">YOUR NEXT STEP</span><h2>Don't just read code.<br><span class="gradient-text">Make it happen.</span></h2><p>Connect your own JavaScript file and bring every component to life. Try, break, debug, repeat.</p></div>
+        <div class="challenge-card"><div class="challenge-symbol">{ }</div><span class="tag">TODAY'S CHALLENGE</span><h3>Make all 6 features interactive.</h3><p>Start with the counter, then move to the task list. One function at a time.</p><a href="#playground">Back to playground ↑</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner"><a class="brand" href="#"><span class="brand-mark">&lt;/&gt;</span><span>js<span class="brand-accent">playground</span></span></a><p>Designed for curious minds. Built for practice. ✦</p><span>© 2026 JS Playground</span></div>
+  </footer>
+
+  <!-- Modal: use JS to add/remove the .show class on #practiceModal -->
+  <div class="modal-backdrop" id="practiceModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button class="modal-close" id="closeModalBtn" type="button" aria-label="Close popup">×</button>
+      <div class="modal-sparkle">✦</div><span class="section-kicker">A LITTLE REMINDER</span>
+      <h2 id="modalTitle">You're doing great!</h2>
+      <p>Every expert was once a beginner. Keep experimenting, keep building, and trust your progress.</p>
+      <button class="btn btn-primary btn-full" id="modalOkayBtn" type="button">Let's do this!</button>
+    </div>
+  </div>
+
+  <!-- Add your JavaScript file here when you are ready:
+       <script src="script.js"></script>
+  -->
+</body>
+</html>
